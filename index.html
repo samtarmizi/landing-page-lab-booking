@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartLab Experience</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+  <style>
+    :root {
+      --bg: #eaf0ff;
+      --surface: #eef3ff;
+      --text-main: #1f2a52;
+      --text-soft: #6370a0;
+      --primary: #5b7cff;
+      --primary-soft: #8ea5ff;
+      --neo-shadow-dark: #c7d2f2;
+      --neo-shadow-light: #ffffff;
+    }
+
+    body {
+      background: radial-gradient(circle at 20% 10%, #f4f7ff 0%, var(--bg) 55%, #dde7ff 100%);
+      color: var(--text-main);
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    }
+
+    .neo-panel {
+      background: var(--surface);
+      border-radius: 24px;
+      box-shadow: 12px 12px 24px var(--neo-shadow-dark), -10px -10px 20px var(--neo-shadow-light);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .badge-soft {
+      background: rgba(91, 124, 255, 0.12);
+      color: var(--primary);
+      border-radius: 999px;
+      padding: 0.45rem 0.9rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-top: 1rem;
+    }
+
+    .hero-subtitle {
+      color: var(--text-soft);
+      font-size: 1.05rem;
+      max-width: 650px;
+    }
+
+    .btn-neo-primary {
+      background: linear-gradient(135deg, var(--primary), var(--primary-soft));
+      border: none;
+      border-radius: 14px;
+      color: #fff;
+      box-shadow: 6px 6px 16px #b5c3eb, -6px -6px 14px #ffffff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-neo-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 8px 8px 18px #aebce5, -8px -8px 18px #ffffff;
+      color: #fff;
+    }
+
+    .kpi-card h3 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 0.2rem;
+    }
+
+    .kpi-card p {
+      color: var(--text-soft);
+      margin: 0;
+    }
+
+    .soft-list li {
+      border: none;
+      background: transparent;
+      color: var(--text-main);
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0.55rem;
+      padding-bottom: 0.55rem;
+    }
+
+    .neo-form .form-control,
+    .neo-form .form-select,
+    .neo-form textarea {
+      border: none;
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text-main);
+      box-shadow: inset 5px 5px 10px #d3def7, inset -5px -5px 10px #ffffff;
+      padding: 0.75rem 0.9rem;
+    }
+
+    .neo-form .form-control:focus,
+    .neo-form .form-select:focus,
+    .neo-form textarea:focus {
+      background: var(--surface);
+      box-shadow: inset 4px 4px 8px #ccd7f3, inset -4px -4px 8px #ffffff, 0 0 0 0.2rem rgba(91, 124, 255, 0.2);
+    }
+
+    .section-label {
+      color: var(--primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="neo-panel p-4 p-md-5">
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-lg-7">
+            <span class="badge-soft">Future-Ready Learning Spaces</span>
+            <h1 class="hero-title">Book smarter labs, learn better every day.</h1>
+            <p class="hero-subtitle mt-3 mb-4">
+              SmartLab gives students and teams a calm, guided way to reserve premium lab spaces
+              with less friction and more confidence.
+            </p>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="#complaint-form" class="btn btn-neo-primary px-4 py-2">Get Support</a>
+              <a href="#features" class="btn btn-light px-4 py-2 rounded-3">Explore Features</a>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5">
+            <div class="neo-panel p-4 kpi-card">
+              <p class="section-label">Trusted by users</p>
+              <h3>12,000+</h3>
+              <p>successful bookings this semester</p>
+              <hr />
+              <h3>98%</h3>
+              <p>satisfaction on booking convenience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <section class="container mb-5" id="features">
+      <div class="row g-4">
+        <div class="col-12 col-lg-6">
+          <div class="neo-panel h-100 p-4 p-md-5">
+            <p class="section-label">What you can do</p>
+            <h2 class="h3 mb-3">Your lab booking, now a smooth digital experience</h2>
+            <p class="text-secondary mb-3">
+              Choose availability, confirm your session, and stay informed in one elegant workflow.
+            </p>
+            <ul class="list-group list-group-flush soft-list">
+              <li class="list-group-item">Pick your preferred lab environment</li>
+              <li class="list-group-item">Set date and preferred time slot</li>
+              <li class="list-group-item">Assign team member or individual user</li>
+              <li class="list-group-item">Define session purpose and equipment needs</li>
+              <li class="list-group-item">Confirm location and support staff preferences</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-6">
+          <div class="neo-panel h-100 p-4 p-md-5">
+            <p class="section-label">Soft selling promise</p>
+            <h2 class="h3 mb-3">Focus more on outcomes, less on scheduling stress</h2>
+            <p class="text-secondary mb-3">
+              Designed for modern learners and teams, SmartLab helps you reserve the right room
+              at the right time so your sessions can stay productive.
+            </p>
+            <div class="row g-3 mt-2">
+              <div class="col-sm-6">
+                <div class="neo-panel p-3 text-center">
+                  <strong>Fast Booking</strong>
+                  <p class="mb-0 text-secondary small">Reserve in under 60 seconds</p>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="neo-panel p-3 text-center">
+                  <strong>Clear Availability</strong>
+                  <p class="mb-0 text-secondary small">Know your options instantly</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="complaint-form">
+      <div class="row justify-content-center">
+        <div class="col-12 col-xl-10">
+          <div class="neo-panel p-4 p-md-5">
+            <div class="row g-4 align-items-start">
+              <div class="col-12 col-lg-5">
+                <p class="section-label">Customer care</p>
+                <h2 class="h3 mb-3">Need help? Share your complaint with us.</h2>
+                <p class="text-secondary mb-0">
+                  Your feedback helps us improve every booking touchpoint. Submit your issue and
+                  our support team will follow up promptly.
+                </p>
+              </div>
+
+              <div class="col-12 col-lg-7">
+                <form class="neo-form">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label for="fullName" class="form-label">Full Name</label>
+                      <input type="text" class="form-control" id="fullName" name="fullName" required />
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="email" name="email" required />
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <label for="complaintCategory" class="form-label">Category</label>
+                      <select class="form-select" id="complaintCategory" name="complaintCategory" required>
+                        <option value="" selected disabled>Select a category</option>
+                        <option value="booking">Booking Issue</option>
+                        <option value="equipment">Equipment Issue</option>
+                        <option value="staff">Staff Support</option>
+                        <option value="facility">Facility Problem</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                      <label for="bookingRef" class="form-label">Booking Reference (Optional)</label>
+                      <input type="text" class="form-control" id="bookingRef" name="bookingRef" />
+                    </div>
+
+                    <div class="col-12">
+                      <label for="complaintMessage" class="form-label">Complaint Details</label>
+                      <textarea
+                        class="form-control"
+                        id="complaintMessage"
+                        name="complaintMessage"
+                        rows="5"
+                        placeholder="Tell us what happened and how we can help..."
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="col-12 d-grid d-md-flex justify-content-md-end">
+                      <button type="submit" class="btn btn-neo-primary px-4 py-2">Submit Complaint</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lab Booking Portal</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+  />
+</head>
+<body class="bg-light">
+  <header class="bg-primary text-white py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-8">
+          <h1 class="display-6 fw-bold mb-3">Lab Booking Portal</h1>
+          <p class="lead mb-0">
+            Book your preferred lab quickly and submit complaints for support when needed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-5">
+    <section class="container mb-5">
+      <div class="row g-4">
+        <div class="col-12 col-md-6 col-xl-4">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h2 class="h5 card-title">Book a Lab</h2>
+              <p class="card-text text-secondary mb-3">
+                Users can book available labs with date, time, and purpose details.
+              </p>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Select a lab</li>
+                <li class="list-group-item">Select a date</li>
+                <li class="list-group-item">Select a time</li>
+                <li class="list-group-item">Select a user</li>
+                <li class="list-group-item">Select a purpose</li>
+                <li class="list-group-item">Select equipment</li>
+                <li class="list-group-item">Select staff</li>
+                <li class="list-group-item">Select location</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-xl-8">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+              <h2 class="h5 card-title">Administrative Access</h2>
+              <p class="card-text text-secondary mb-0">
+                Admin can manage lab schedules, bookings, and facility details in one place.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+          <div class="card shadow-sm border-0">
+            <div class="card-body p-4 p-md-5">
+              <h2 class="h4 mb-3">Complaint Form</h2>
+              <p class="text-secondary mb-4">
+                Report any booking, lab, or equipment issue. Our team will review and respond.
+              </p>
+
+              <form>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName" required />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required />
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="complaintCategory" class="form-label">Category</label>
+                    <select class="form-select" id="complaintCategory" name="complaintCategory" required>
+                      <option value="" selected disabled>Select a category</option>
+                      <option value="booking">Booking Issue</option>
+                      <option value="equipment">Equipment Issue</option>
+                      <option value="staff">Staff Support</option>
+                      <option value="facility">Facility Problem</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <label for="bookingRef" class="form-label">Booking Reference (Optional)</label>
+                    <input type="text" class="form-control" id="bookingRef" name="bookingRef" />
+                  </div>
+
+                  <div class="col-12">
+                    <label for="complaintMessage" class="form-label">Complaint Details</label>
+                    <textarea
+                      class="form-control"
+                      id="complaintMessage"
+                      name="complaintMessage"
+                      rows="5"
+                      placeholder="Describe the issue in detail..."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="col-12 d-grid d-md-flex justify-content-md-end">
+                    <button type="submit" class="btn btn-primary px-4">Submit Complaint</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
