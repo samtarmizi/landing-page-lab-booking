@@ -39,6 +39,23 @@
       padding: 5rem 0 3rem;
     }
 
+    .navbar-neo {
+      background: rgba(238, 243, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      box-shadow: 8px 8px 16px #c7d2f2, -8px -8px 16px #ffffff;
+    }
+
+    .navbar-neo .nav-link {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .navbar-neo .nav-link:hover,
+    .navbar-neo .nav-link:focus {
+      color: var(--primary);
+    }
+
     .badge-soft {
       background: rgba(91, 124, 255, 0.12);
       color: var(--primary);
@@ -127,6 +144,32 @@
   </style>
 </head>
 <body>
+  <div class="container pt-3 pt-md-4">
+    <nav class="navbar navbar-expand-lg navbar-neo px-3 px-md-4">
+      <a class="navbar-brand fw-bold text-primary" href="index.html">SmartLab</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#complaint-form">Support</a></li>
+          <li class="nav-item"><a class="nav-link" href="form.html">Book Lab</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <header class="hero">
     <div class="container">
       <div class="neo-panel p-4 p-md-5">
